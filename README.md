@@ -1,17 +1,27 @@
-# movie_app
+# KyiKyaMal (movie_app)
 
-A new Flutter project.
+Flutter movie browsing app — branded as **KyiKyaMal**.
 
-## Getting Started
+## TMDB API
 
-This project is a starting point for a Flutter application.
+Live movie data uses [The Movie Database (TMDB)](https://www.themoviedb.org/) API.
 
-A few resources to get you started if this is your first Flutter project:
+1. Create an API key: https://www.themoviedb.org/settings/api
+2. Either:
+   - Put it in `lib/config/tmdb_secrets.dart`:
+     ```dart
+     const String tmdbApiKeyOverride = 'YOUR_KEY';
+     ```
+   - Or run with:
+     ```bash
+     flutter run --dart-define=TMDB_API_KEY=YOUR_KEY
+     ```
 
-- [Learn Flutter](https://docs.flutter.dev/get-started/learn-flutter)
-- [Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Flutter learning resources](https://docs.flutter.dev/reference/learning-resources)
+Without a key the app cannot load catalogs — set the key before running.
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Run
+
+```bash
+flutter pub get
+flutter run
+```

@@ -33,6 +33,9 @@ migrate_working_dir/
 /build/
 /coverage/
 
+# Local secrets (optional override of empty committed stub)
+lib/config/tmdb_secrets.local.dart
+
 # Symbolication related
 app.*.symbols
 
